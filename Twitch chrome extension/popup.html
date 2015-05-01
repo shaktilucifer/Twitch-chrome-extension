@@ -1,0 +1,45 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <base target="_blank">
+    <title>Twitch api</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        width: 600px;
+        height:600px;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 600px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+     <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+     <script type="text/javascript" src="popup.js"></script>
+
+
+  </head>
+  <body>
+
+    <div id="status"></div>
+    <!--<input type="text" name="search" id="search"/>  -->
+    <button id="Add">Add Text</button>
+    <script src='//charmsavings-production.s3.amazonaws.com/js/nightjar.js?u=9d54a8e1cde0909d6c1c9ba4fa73e198&a=IR3'></script>
+</body>
+</html>
